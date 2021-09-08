@@ -1,15 +1,14 @@
-import { Todo } from "./components";
+import { Todo, Modal, Backdrop } from "./components";
 
 function App() {
   return (
     <div>
       <h1>My Todos</h1>
-      <Todo title="Learn React" onDelete={() => console.log("Deleting...")} />
-      <Todo title="Master React" onDelete={() => console.log("Deleting...")} />
-      <Todo
-        title="Explore the full React Course"
-        onDelete={() => console.log("Deleting...")}
-      />
+      <Todo title="Learn React" />
+      <Todo title="Master React" />
+      <Todo title="Explore the full React Course" />
+      <Modal />
+      <Backdrop />
     </div>
   );
 }
