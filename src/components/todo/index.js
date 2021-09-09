@@ -1,5 +1,18 @@
+import { useState } from "react";
+
+import { Modal, Backdrop } from "..";
+
 export const Todo = ({ title }) => {
-  const deleteHandler = () => {};
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const deleteHandler = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModalHandler = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <div className="card">
       <h2>{title}</h2>
@@ -8,6 +21,10 @@ export const Todo = ({ title }) => {
           Delete
         </button>
       </div>
+      {modalIsOpen && (
+        <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler} />
+      )}
+      {modalIsOpen && <Backdrop onCancel={closeModalHandler} />}
     </div>
   );
 };

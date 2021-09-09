@@ -1,4 +1,4 @@
-import { Todo, Modal, Backdrop } from "./components";
+import { Todo } from "./components";
 
 function App() {
   return (
@@ -7,8 +7,6 @@ function App() {
       <Todo title="Learn React" />
       <Todo title="Master React" />
       <Todo title="Explore the full React Course" />
-      <Modal />
-      <Backdrop />
     </div>
   );
 }

@@ -1,3 +1,3 @@
-export const Backdrop = () => {
-  return <div className="backdrop" />;
+export const Backdrop = ({ onCancel }) => {
+  return <div className="backdrop" onClick={onCancel} />;
 };
