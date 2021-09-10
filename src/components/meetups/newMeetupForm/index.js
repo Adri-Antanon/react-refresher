@@ -4,7 +4,7 @@ import { Card } from "../../ui";
 
 import classes from "./styles.module.css";
 
-export const NewMeetupForm = () => {
+export const NewMeetupForm = ({ onAddMeetup }) => {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
   const addressInputRef = useRef();
@@ -25,7 +25,7 @@ export const NewMeetupForm = () => {
       description: enteredDescription,
     };
 
-    console.log(meetupData);
+    onAddMeetup(meetupData);
   };
   return (
     <Card>
